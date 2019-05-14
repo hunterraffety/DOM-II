@@ -58,3 +58,35 @@ textContent.forEach(p => {
 });
 
 // 9
+const heading = document.querySelector('.logo-heading');
+heading.addEventListener('mouseover', e => {
+  e.target.style.color = 'maroon';
+});
+
+heading.addEventListener('mouseout', e => {
+  e.target.style.color = 'black';
+});
+
+// 10
+const footer = document.querySelector('input');
+footer.addEventListener('keydown', e => {
+  e.target.style.backgroundColor = 'orange';
+});
+
+// 11
+const form = document.querySelector('form');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+});
+
+// 12 - stop propagation
+const destination = document.querySelector('.destination');
+destination.addEventListener('click', e => {
+  alert('blah');
+});
+
+const btnDiv = document.querySelector('.btn');
+btnDiv.addEventListener('click', e => {
+  e.stopPropagation();
+  alert('btn clicked but stops propagating to outerdiv.');
+});
